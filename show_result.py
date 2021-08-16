@@ -53,10 +53,6 @@ finally:
     if conn:
         conn.close()
 
-f = open("scripts/select_query.sql", "a")
-f.truncate(20)
-f.close()
-
 def read_file():
     with open(show_result, 'r') as r1:
         return r1.read()

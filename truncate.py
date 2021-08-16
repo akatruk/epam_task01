@@ -1,6 +1,8 @@
-path = 'scripts/increment_data_load.sql'
+path = 'scripts/select_query.sql'
  
-try:
-    open(path, 'w').close()
-except IOError:
-    print('Failure')
+
+def read_file():
+    with open(path, 'r') as r1:
+        return r1.read()
+
+print(read_file())
