@@ -7,10 +7,10 @@ except IOError:
 
 import requests
 
-url = "https://covidtrackerapi.bsg.ox.ac.uk/api/v2/stringency/date-range/2020-05-01/2020-05-31"
+url = "https://covidtrackerapi.bsg.ox.ac.uk/api/v2/stringency/date-range/2021-01-01/2021-08-01"
 response = requests.get(url, headers={'Accept':'application/json'})
 data = response.json()
-data1 = data['data']['2020-05-11']
+data1 = data['data']['2021-01-01']
 
 def output_api():
     k = ''
@@ -92,4 +92,4 @@ def index():
         return render_template('index.html', tt1=t1, output1=_result)
 
 if __name__ == '__main__':
-    app.run(debug=True,host="0.0.0.0", port=80)
+    app.run(debug=True,host="0.0.0.0", port=81)
