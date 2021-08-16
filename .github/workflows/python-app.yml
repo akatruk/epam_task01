@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flask
+        pip install flask yaml2
         sudo apt-get --yes install python3-psycopg2
     - name: Run unittest
       run: |
