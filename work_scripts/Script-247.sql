@@ -11,4 +11,9 @@ stringency numeric(10, 5) null
 )
 
 select * from epam;
+truncate table epam;
+
+select *
+from epam e
+order by deaths::int desc;
 
