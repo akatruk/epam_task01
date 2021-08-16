@@ -10,10 +10,20 @@ stringency_actual numeric(10, 5) null,
 stringency numeric(10, 5) null
 )
 
-select * from epam;
+select * 
+from epam
+where country_code = 'ALB';
+
+group by country_code 
+having country_code >= 1;
+
 truncate table epam;
 
-select *
-from epam e
+with cte1 as (
+select distinct country_code, date_value, confirmed, deaths, stringency_actual, stringency
+from epam e)
+select * from cte1
 order by deaths::int desc;
 
+SELECT 
+FROM public.epam;

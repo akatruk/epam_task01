@@ -8,3 +8,5 @@ read from API -> insert to file -> load to database PostgreSQL -> run Flask with
 test_show_result.py
 unittest: check to database PostgreSQL connectivity
 
+docker build -f dockerfile -t show_result .
+docker run -d -p 80:80 show_result --name idle --network="host"

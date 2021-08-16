@@ -88,4 +88,4 @@ def index():
         return render_template('index.html', tt1=t1, output1=_result)
 
 if __name__ == '__main__':
-    app.run(debug=True,host="0.0.0.0", port=81)
+    app.run(debug=True,host="0.0.0.0", port=80)
