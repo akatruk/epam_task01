@@ -36,4 +36,4 @@ jobs:
       run: |
         docker build -f dockerfile -t errbx/epam_task01:latest .
         docker login -u “errbx” -p “Vfhnvfhn123” docker.com
-        docker push errbx/epam_task01:latest
+        docker login -u errbx --password-stdin "Vfhnvfhn123" docker.com
